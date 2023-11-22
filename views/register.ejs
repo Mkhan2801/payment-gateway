@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/public/css/login.css">
+
+
+
+<!-- register.ejs -->
+
+
+
+<div class="login-box">
+	<h2>Sign Up</h2>
+	<form action="/api/newUser" method="post">
+	  <div class="user-box">
+		<input type="text" name="name" required>
+		<label>Name</label>
+		<%= massage %>
+	  </div>
+	  <div class="user-box">
+		<input type="email" name="email" required>
+		<label>Username</label>
+	  </div>
+	  <div class="user-box">
+		<input type="password" name="password" required>
+		<label>Password</label>
+	  </div>
+	  <div class="user-box">
+		<input type="tel" name="phoneNo" required>
+		<label>Phone No</label>
+	  </div>
+	  
+	  <a><button type="submit">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		Submit
+	  </button>
+	</a>     
+	<a href="/login" >
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		Login
+	  
+	</a> 
+   </form>
+  </div>
+

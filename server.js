@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const myDB = require('./routes/connection');
 const flash = require('express-flash');
+require('dotenv').config();
 
 var app = express();
 app.use('/public', express.static(process.cwd() + '/public'));
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash())
 app.use(require("express-session")({
-    secret: "Rusty is a dog",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));
